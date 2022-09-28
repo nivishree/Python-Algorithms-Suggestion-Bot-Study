@@ -1,3 +1,4 @@
+import os
 from graph import graph
 from copy import deepcopy
 class digraph(graph):
@@ -9,11 +10,11 @@ class digraph(graph):
     set_edge_weight, get_edge_weight, 
     """
 
-    DEFAULT_WEIGHT = 1
-    DIRECTED = True
+    DEFAULT_WEIGHT = 1;
+    directed = True
 
     def __init__(self):
-        self.node_neighbors = {}
+        self.node_neighbors = {}  
 
     def __str__(self):
         return "Directed Graph \nNodes: %s \nEdges: %s" % (self.nodes(), self.edges())
